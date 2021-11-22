@@ -1,3 +1,4 @@
+src/collective.isotope/
 .coverage
 *.egg-info
 *.log

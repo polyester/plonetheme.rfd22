@@ -19,7 +19,7 @@
       display: block;
       padding: @plone-sitenav-link-padding;
       color: white;
-      font-size: ceil((@plone-font-size-base * 1.15));;
+      font-size: ceil((@plone-font-size-base * 1.15));
       hyphens: auto;
       &:hover,
       &:focus {
@@ -35,7 +35,7 @@
       height: 0;
       li {
         a {
-          font-size: ceil((@plone-font-size-base * 1.1));;
+          font-size: ceil((@plone-font-size-base * 1.1));
           background-color: @plone-sitenav-bg;
         }
       }
@@ -108,16 +108,15 @@
               top: 0.5em;
             }
           }
-
         }
       }
       label {
         &:after {
-            width: 2.0em;
-            height: 2.0em;
-            font-size: 0.75em;
-            padding: 0.5em 1em 0.5em 0;
-            background: transparent;
+          width: 2em;
+          height: 2em;
+          font-size: 0.75em;
+          padding: 0.5em 1em 0.5em 0;
+          background: transparent;
         }
       }
       ul {
@@ -139,7 +138,7 @@
     .has_subtree .has_subtree:hover > ul {
       opacity: 1;
       visibility: visible;
-      transition: ease-in .35s;
+      transition: ease-in 0.35s;
     }
     .has_subtree .has_subtree ul {
       position: absolute;
@@ -162,7 +161,7 @@
   position: relative;
   min-height: @plone-sitenav-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @plone-sitenav-margin-bottom;
-  box-shadow: 0 1px 3px rgba(0,0,0,.17);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -178,9 +177,9 @@
 .plone-navbar-collapse {
   overflow-x: visible;
   padding-right: @plone-sitenav-padding-horizontal;
-  padding-left:  @plone-sitenav-padding-horizontal;
+  padding-left: @plone-sitenav-padding-horizontal;
   border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   &:extend(.clearfix all);
   -webkit-overflow-scrolling: touch;
 
@@ -217,7 +216,7 @@
   z-index: 1; //just in case
   position: relative;
   float: right;
-  margin-top:  8px;
+  margin-top: 8px;
   margin-bottom: 6px;
   padding: 6px 10px;
 
@@ -232,8 +231,8 @@
     outline: 0;
   }
   &:hover {
-  	background-color: darken(@plone-sitenav-link-hover-bg, 15%);
-  	border-color: darken(@plone-sitenav-link-hover-bg, 25%);
+    background-color: darken(@plone-sitenav-link-hover-bg, 15%);
+    border-color: darken(@plone-sitenav-link-hover-bg, 25%);
   }
 
   // Burgerbar (uncomment for a ≡ menu and comment menu just below)
@@ -253,7 +252,7 @@
     margin-bottom: 3px;
   }
   //end burgerbar icon-bar
-  */
+
 
   // Menu (That option with a word, witch is language-dependant, is to ensure a higher tap ratio on the menu)
   .icon-bar::after {
@@ -263,7 +262,7 @@
   }
   .icon-bar + .icon-bar::after {content: "";}
   //end menu icon-bar
-
+  */
   @media (min-width: @plone-grid-float-breakpoint) {
     display: none;
   }
@@ -273,7 +272,7 @@
   margin: 0 -@plone-sitenav-padding-horizontal 0;
 
   > li > a {
-    padding-top:    10px;
+    padding-top: 10px;
     padding-bottom: 10px;
     line-height: @plone-line-height-computed;
   }
@@ -284,7 +283,7 @@
     &,
     &:hover,
     &:focus {
-      color: white;
+      color: @plone-nav-color;
       background-color: @plone-sitenav-link-hover-bg;
     }
   }
@@ -298,7 +297,7 @@
         padding-right: 2em;
       }
       > a {
-        padding-top:    @plone-sitenav-padding-vertical;
+        padding-top: @plone-sitenav-padding-vertical;
         padding-bottom: @plone-sitenav-padding-vertical;
       }
       label {
@@ -309,7 +308,6 @@
       }
       li.has_subtree label:after {
         transform: rotate(-90deg);
-
       }
     }
 
@@ -325,6 +323,5 @@
         background-color: @plone-sitenav-link-hover-bg;
       }
     }
-
   }
 }

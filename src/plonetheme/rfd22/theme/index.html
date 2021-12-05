@@ -1,60 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Plone Theme</title>
-    <link rel="shortcut icon" type="image/x-icon"
-          href="barceloneta/barceloneta-favicon.ico" />
-    <link rel="apple-touch-icon"
-          href="barceloneta/barceloneta-apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144"
-          href="barceloneta/barceloneta-apple-touch-icon-144x144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114"
-          href="barceloneta/barceloneta-apple-touch-icon-114x114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72"
-          href="barceloneta/barceloneta-apple-touch-icon-72x72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="57x57"
-          href="barceloneta/barceloneta-apple-touch-icon-57x57-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed"
-          href="barceloneta/barceloneta-apple-touch-icon-precomposed.png" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#603cba" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <section id="portal-toolbar">
-    </section>
+    <section id="portal-toolbar"></section>
+
     <div class="outer-wrapper">
+      <div id="mainnavigation-wrapper">
+        <div id="mainnavigation"></div>
+      </div>
       <header id="content-header">
+        <div class="container flexhorizontal flexwrap flexspacebetween">
+          <header id="portal-top"></header>
+          <div class="rfd-socialmedia">
+            <a
+              href="https://facebook.com/rozefilmdagen"
+              id="Facebook"
+              title="Like ons op Facebook"
+              target="_blank"
+              ><i class="fab fa-facebook"></i> </a
+            ><a
+              href="https://twitter.com/rozefilmdagen"
+              id="Twitter"
+              title="Volg Rozefilmdagen op Twitter"
+              target="_blank"
+              ><i class="fab fa-twitter"></i> </a
+            ><a
+              href="https://www.instagram.com/roze_filmdagen/"
+              id="Instagram"
+              title="Volg Rozefilmdagen op Instagram"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+
+          <div id="anonymous-actions"></div>
+        </div>
         <div class="container">
-          <header id="portal-top">
-          </header>
-          <div id="anonymous-actions">
+          <div class="rfd-headertext">
+            10 - 20 maart 2022 &mdash; Het Ketelhuis/Westergasfabriek/Amsterdam
+            &amp; online
           </div>
         </div>
       </header>
-      <div id="mainnavigation-wrapper">
-        <div id="mainnavigation">
-        </div>
-      </div>
+
       <div id="above-content-wrapper">
-          <div id="above-content">
-          </div>
+        <div id="above-content"></div>
       </div>
       <div class="container">
-
-        <!-- DELETE ME: -->
-        <h1 class="custom-theme-marker">Custom Plone theme based on Barceloneta</h1>
-
         <div class="row">
           <aside id="global_statusmessage"></aside>
         </div>
         <main id="main-container" class="row row-offcanvas row-offcanvas-right">
-          <div id="content-container">
-          </div>
-          <div id="column1-container">
-          </div>
-          <div id="column2-container">
-          </div>
-        </main><!--/row-->
-      </div><!--/container-->
-    </div> <!--/outer-wrapper -->
+          <div id="content-container"></div>
+          <div id="column1-container"></div>
+          <div id="column2-container"></div>
+        </main>
+        <!--/row-->
+      </div>
+      <!--/container-->
+    </div>
+    <!--/outer-wrapper -->
     <footer id="portal-footer-wrapper">
       <div class="container" id="portal-footer">
         <div class="doormat row"></div>

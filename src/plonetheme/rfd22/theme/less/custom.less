@@ -1,18 +1,19 @@
 /* our custom styles */
 
-@2022-light-accent: #ebebeb;
-@2022-dark-accent: #b3b3b3;
+@2022-light-accent: #ffeaff;
+@2022-dark-accent: #ffdaff;
 @2022-darkest-accent: #7c7c7c;
-@2022-grey: #eee;
+@2022-grey: #ffa9ff;
 @2022-darkgrey: #272725;
 @2022-darkest: #171715;
 @2022-gradient: linear-gradient(70deg, @2022-light-accent, @2022-dark-accent);
 
 @plone-body-bg: white;
 @plone-text-color: @2022-darkest;
-@plone-text-discreet: lighten(@2022-dark-accent, 5%);
+@plone-text-discreet: lighten(@2022-darkest-accent, 15%);
 
 @plone-sitenav-link-hover-bg: @2022-light-accent;
+@plone-sitenav-link-hover: @2022-darkest-accent;
 @plone-sitenav-bg: @2022-light-accent;
 @plone-breadcrumb-bg: white;
 @plone-breadcrumb-color: @2022-dark-accent;
@@ -21,12 +22,63 @@
 @plone-link-color-on-grey: @2022-darkest-accent;
 
 @plone-link-color: @2022-darkest;
-@plone-link-color-on-dark: @2022-light-accent;
+@plone-link-color-on-dark: @2022-darkest-accent;
 @plone-btn-context-color: #fff;
 @plone-btn-context-bg: @2022-dark-accent;
 @plone-btn-context-border: darken(@plone-btn-context-bg, 10%);
 
 @plone-font-size-base: 18px;
+
+@montserrat-font-path: "montserrat";
+@font-face {
+  font-family: "montserratbold";
+  src: url("@{montserrat-font-path}/montserrat-bold-webfont.woff2")
+      format("woff2"),
+    url("@{montserrat-font-path}/montserrat-bold-webfont.woff") format("woff"),
+    url("@{montserrat-font-path}/montserrat-bold-webfont.svg#montserratbold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserratitalic";
+  src: url("@{montserrat-font-path}/montserrat-italic-webfont.woff2")
+      format("woff2"),
+    url("@{montserrat-font-path}/montserrat-italic-webfont.woff") format("woff"),
+    url("@{montserrat-font-path}/montserrat-italic-webfont.svg#montserratitalic")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserratbold_italic";
+  src: url("@{montserrat-font-path}/montserrat-bolditalic-webfont.woff2")
+      format("woff2"),
+    url("@{montserrat-font-path}/montserrat-bolditalic-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserratregular";
+  src: url("@{montserrat-font-path}/montserrat-regular-webfont.woff2")
+      format("woff2"),
+    url("@{montserrat-font-path}/montserrat-regular-webfont.woff")
+      format("woff"),
+    url("@{montserrat-font-path}/montserrat-regular-webfont.svg#montserratregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "montserratbold";
+}
 
 //*// DEVICES
 @plone-screen-xs-min: 480px;
@@ -44,6 +96,11 @@
 @plone-nav-color: @2022-darkest-accent;
 .plone-nav li label::after {
   background: none;
+}
+.plone-navbar-collapse {
+  position: relative;
+  z-index: 4;
+  padding: 0px;
 }
 #mainnavigation-wrapper {
   display: flex;
@@ -349,7 +406,7 @@ p.callout img.image-right {
 #portal-footer-wrapper {
   padding: 30px 15px;
   color: @plone-text-color;
-  background-color: @2022-darkest;
+  background-color: @plone-body-bg;
   text-align: left;
   clear: both;
   p {

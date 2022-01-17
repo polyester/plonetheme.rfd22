@@ -7,14 +7,15 @@
 @2022-darkgrey: #272725;
 @2022-darkest: #171715;
 @2022-gradient: linear-gradient(70deg, @2022-light-accent, @2022-dark-accent);
+@2022-navcolor: #fff;
 
 @plone-body-bg: white;
 @plone-text-color: @2022-darkest;
 @plone-text-discreet: lighten(@2022-darkest-accent, 15%);
 
-@plone-sitenav-link-hover-bg: @2022-light-accent;
-@plone-sitenav-link-hover: @2022-darkest-accent;
-@plone-sitenav-bg: @2022-light-accent;
+@plone-sitenav-link-hover-bg: @2022-navcolor;
+@plone-sitenav-link-hover: @2022-darkgrey;
+@plone-sitenav-bg: @2022-navcolor;
 @plone-breadcrumb-bg: white;
 @plone-breadcrumb-color: @2022-dark-accent;
 //** Text color of current page in the breadcrumb
@@ -128,10 +129,19 @@ h3 {
   z-index: 4;
   padding: 0px;
 }
+
+#filmstrip-wrapper {
+  background-image: url("filmstrip.png");
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-color: @2022-light-accent;
+  height: 50px;
+}
 #mainnavigation-wrapper {
   display: flex;
   justify-content: space-between;
-  background-color: @2022-light-accent;
+  background-color: @2022-navcolor;
   height: 50px;
 }
 #mainnavigation-wrapper #mainnavigation {
@@ -165,6 +175,7 @@ h3 {
 #content-header,
 .rfd-headertext {
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 #content-core a {
   border-bottom: none;
@@ -174,7 +185,7 @@ h3 {
   color: #000;
 }
 .plone-nav li a {
-  color: @2022-darkest;
+  color: @2022-darkest-accent;
 }
 #formfield-form-widgets-interest-groups {
   display: none;
@@ -262,6 +273,12 @@ form#searchGadget_form.pat-livesearch {
 }
 #search-results-wrapper .autotabs {
   background: @2022-darkgrey;
+}
+
+@media screen and (max-width: @plone-screen-md-min) and (min-width: @plone-screen-sm-min) {
+  #mainnavigation-wrapper #portal-searchbox {
+    display: none;
+  }
 }
 
 @media (min-width: @plone-grid-float-breakpoint) {
@@ -362,7 +379,7 @@ p.callout img.image-right {
 }
 .plone-navbar {
   .clearfix();
-  background-color: @2022-light-accent;
+  background-color: @2022-navcolor;
   position: relative;
   min-height: @plone-sitenav-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @plone-sitenav-margin-bottom;
@@ -373,6 +390,24 @@ p.callout img.image-right {
   &:extend(.clearfix all);
 }
 
+.plone-nav li a {
+  font-family: montserratextrabold;
+  font-size: 1.5em;
+  @media (max-width: @plone-container-lg) {
+    font-size: 1em;
+  }
+}
+
+.plone-navbar-nav .current > a,
+.plone-navbar-nav .selected > a,
+.plone-navbar-nav .current > a:hover,
+.plone-navbar-nav .selected > a:hover,
+.plone-navbar-nav .current > a:focus,
+.plone-navbar-nav .selected > a:focus {
+  color: @2022-darkgrey;
+  background-color: @2022-navcolor;
+}
+
 .plone-navbar-toggle {
   z-index: 1; //just in case
   position: relative;
@@ -381,7 +416,7 @@ p.callout img.image-right {
   margin-bottom: 3px;
   padding: 6px 10px;
 
-  background-color: transparent;
+  background-color: @2022-navcolor;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid @2022-darkest;
   border-radius: @plone-border-radius-base;
@@ -540,14 +575,17 @@ html [class*="shorts"] .event.summary {
   clear: left;
   background-color: white;
   margin-bottom: 1em;
-  margin-top: 0px;
+  margin-top: 1em;
+  display: none;
+}
+.plone-breadcrumb ol > li {
+  position: unset;
 }
 #portal-footer img {
   padding-right: 10em;
   padding-bottom: 2em;
 }
 .rfd-headertext {
-  position: relative;
   margin-left: 0em;
 }
 .rfd-socialmedia {

@@ -4078,14 +4078,14 @@ ul.picker__list {
   position: relative;
   display: block;
   padding: 10px 15px;
-  color: #7c7c7c;
+  color: #272725;
   font-size: 21px;
   hyphens: auto;
 }
 .plone-nav li a:hover,
 .plone-nav li a:focus {
   text-decoration: none;
-  background-color: #ffeaff;
+  background-color: #fff;
 }
 .plone-nav li ul {
   padding-left: 0.5em;
@@ -4095,7 +4095,7 @@ ul.picker__list {
 }
 .plone-nav li ul li a {
   font-size: 20px;
-  background-color: #ffeaff;
+  background-color: #fff;
 }
 .plone-nav li .opener {
   display: none;
@@ -4196,7 +4196,7 @@ ul.picker__list {
   }
 }
 .plone-navbar {
-  background-color: #ffeaff;
+  background-color: #fff;
   color: white;
   position: relative;
   min-height: 50px;
@@ -4301,8 +4301,8 @@ ul.picker__list {
   outline: 0;
 }
 .plone-navbar-toggle:hover {
-  background-color: #ff9dff;
-  border-color: #ff6aff;
+  background-color: #d9d9d9;
+  border-color: #bfbfbf;
 }
 @media (min-width: 768px) {
   .plone-navbar-toggle {
@@ -4324,7 +4324,7 @@ ul.picker__list {
 .plone-navbar-nav .current > a:focus,
 .plone-navbar-nav .selected > a:focus {
   color: #7c7c7c;
-  background-color: #ffeaff;
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .plone-navbar-nav {
@@ -4353,8 +4353,8 @@ ul.picker__list {
   .plone-navbar-nav .has_subtree.inPath > a,
   .plone-navbar-nav .has_subtree.inPath > a:hover,
   .plone-navbar-nav .has_subtree.inPath > a:focus {
-    color: #7c7c7c;
-    background-color: #ffeaff;
+    color: #272725;
+    background-color: #fff;
   }
 }
 .principal {
@@ -5249,10 +5249,20 @@ h3 {
   z-index: 4;
   padding: 0px;
 }
+#filmstrip-wrapper {
+  background-image: url("filmstrip.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  background-color: #ffeaff;
+  height: 50px;
+}
 #mainnavigation-wrapper {
   display: flex;
   justify-content: space-between;
-  background-color: #ffeaff;
+  background-color: #fff;
   height: 50px;
 }
 #mainnavigation-wrapper #mainnavigation {
@@ -5286,6 +5296,7 @@ h3 {
 #content-header,
 .rfd-headertext {
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 #content-core a {
   border-bottom: none;
@@ -5295,7 +5306,7 @@ h3 {
   color: #000;
 }
 .plone-nav li a {
-  color: #171715;
+  color: #7c7c7c;
 }
 #formfield-form-widgets-interest-groups {
   display: none;
@@ -5372,6 +5383,11 @@ form#searchGadget_form.pat-livesearch {
 }
 #search-results-wrapper .autotabs {
   background: #272725;
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  #mainnavigation-wrapper #portal-searchbox {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   #mainnavigation-wrapper #portal-searchbox {
@@ -5465,7 +5481,7 @@ p.callout img.image-right {
   margin: 0;
 }
 .plone-navbar {
-  background-color: #ffeaff;
+  background-color: #fff;
   position: relative;
   min-height: 50px;
   margin-bottom: 25px;
@@ -5480,6 +5496,24 @@ p.callout img.image-right {
 .plone-navbar::after {
   clear: both;
 }
+.plone-nav li a {
+  font-family: montserratextrabold;
+  font-size: 1.5em;
+}
+@media (max-width: 1200px) {
+  .plone-nav li a {
+    font-size: 1em;
+  }
+}
+.plone-navbar-nav .current > a,
+.plone-navbar-nav .selected > a,
+.plone-navbar-nav .current > a:hover,
+.plone-navbar-nav .selected > a:hover,
+.plone-navbar-nav .current > a:focus,
+.plone-navbar-nav .selected > a:focus {
+  color: #272725;
+  background-color: #fff;
+}
 .plone-navbar-toggle {
   z-index: 1;
   position: relative;
@@ -5487,7 +5521,7 @@ p.callout img.image-right {
   margin-top: 6px;
   margin-bottom: 3px;
   padding: 6px 10px;
-  background-color: transparent;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #171715;
   border-radius: 4px;
@@ -5505,8 +5539,8 @@ p.callout img.image-right {
   outline: 0;
 }
 .plone-navbar-toggle:hover {
-  background-color: #ff9dff;
-  border-color: #ff6aff;
+  background-color: #d9d9d9;
+  border-color: #bfbfbf;
 }
 .plone-navbar-toggle .icon-bar {
   display: block;
@@ -5636,14 +5670,17 @@ html [class*="shorts"] .event.summary {
   clear: left;
   background-color: white;
   margin-bottom: 1em;
-  margin-top: 0px;
+  margin-top: 1em;
+  display: none;
+}
+.plone-breadcrumb ol > li {
+  position: unset;
 }
 #portal-footer img {
   padding-right: 10em;
   padding-bottom: 2em;
 }
 .rfd-headertext {
-  position: relative;
   margin-left: 0em;
 }
 .rfd-socialmedia {

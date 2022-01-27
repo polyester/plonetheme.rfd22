@@ -5250,8 +5250,8 @@ h3 {
   padding: 0px;
 }
 #filmstrip-wrapper {
-  background-image: url("filmstrip.png");
-  background-position: center;
+  background-image: url("filmstrip.jpg");
+  background-position: left top;
   background-repeat: no-repeat;
   /* Do not repeat the image */
   background-size: cover;
@@ -5322,6 +5322,9 @@ div.formControls {
 }
 form#newsletter-subscriber-form label {
   color: #171715;
+}
+.mosaic-tile-content p a {
+  color: #7c7c7c;
 }
 .newsImageContainer {
   margin: 0 0 1em 1em;

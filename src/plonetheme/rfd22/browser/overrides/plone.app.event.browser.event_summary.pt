@@ -137,7 +137,18 @@
         </tal:span>
       </li>
     </tal:cond>
+    <tal:cond condition="context/bioscoop_tickets">
+      <li class="tickets-url">
+      <h3>Tickets:</h3>
+      <tal:span tal:define="ticket_url python: context.bioscoop_tickets">
 
+        <a href="#"
+        tal:attributes="href string:$ticket_url"><strong><i class="fas fa-ticket-alt fa-3x" aria-hidden="true"></i>
+Buy ticket</strong></a>
+        </tal:span>
+
+      </li>
+    </tal:cond>
   </ul>
 </div>
 </tal:def>
